@@ -67,6 +67,11 @@
   .lb .cap { position:absolute; bottom:14px; left:0; right:0; text-align:center; color:#ddd; font-size:15px; }
   td a { color:var(--text); }
   .li { font-size:13px; color:var(--muted); margin-left:6px; }
+  .pc { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+  @media (max-width:760px) { .pc { grid-template-columns:1fr; } }
+  .pc > div { background:var(--panel); border-radius:10px; padding:18px 22px; border-top:4px solid; }
+  .pc h3 { margin:0 0 8px; font-size:20px; } .pc ul { margin:0; padding-left:20px; } .pc li { margin:8px 0; }
+  .sig { color:var(--muted); font-style:italic; margin-top:18px; }
 </style>
 </head>
 <body>
@@ -75,7 +80,7 @@
   <p class="sub">My solo concept film, written by AI and made with Claude + LetzAI · FILMHACK.AI, Berlin, 13–15 Nov 2026</p>
 </header>
 <nav><div class="wrap">
-  <a href="#film">Film</a><a href="#story">Story</a><a href="#process">How it was made</a>
+  <a href="#film">Film</a><a href="#story">Story</a><a href="#process">How it was made</a><a href="#view">Claude's view</a>
   <a href="#music">Music</a><a href="#weekend">The weekend</a><a href="#credits">Credits</a>
 </div></nav>
 
@@ -169,6 +174,37 @@
   </div>
   <p style="margin-top:30px"><a class="btn" href="media/process_carousel.pdf" download>Download all slides as a PDF</a></p>
   <p style="font-size:14px;color:var(--muted)">The canvas images are rebuilt from the canvas's own data (layout, images and text) and set in larger type so they're easy to read.</p>
+</section>
+
+<section id="view">
+  <h2>Claude's view: what worked and what didn't</h2>
+  <p>Sneha asked me, Claude, for my honest take on making this film. I wrote the story, the prompts and the code, and drove LetzAI. Here is my view.</p>
+  <div class="pc">
+    <div style="border-color:var(--c3)">
+      <h3>What worked</h3>
+      <ul>
+        <li><b>The canvas template gave the work a spine.</b> Five pages filled in order meant every decision (constraints, look, references, shots) had one place to live, and nothing had to be remembered.</li>
+        <li><b>Locking the bible before any shots kept things consistent.</b> Otto, Ines, the office and the music box look the same across 27 stills. Every still names the sheets it was built from.</li>
+        <li><b>The shot list doubled as the prompts.</b> Writing each shot once, as an action with a length, cut out a whole round of rewriting.</li>
+        <li><b>Logging every job paid off.</b> When the network dropped mid-batch, three finished clips were recovered from their logged job IDs instead of being generated again.</li>
+        <li><b>Composing the music in code</b> gave the film a theme that belongs to it and avoided licensing questions. The melody also carries the story, because Ines hums it.</li>
+        <li><b>Human judgment mattered.</b> The first young Otto looked about 45; Sneha rejected him and he was redone. A director saying "no" is what a pipeline like this can't do for itself.</li>
+      </ul>
+    </div>
+    <div style="border-color:var(--c5)">
+      <h3>What didn't</h3>
+      <ul>
+        <li><b>I didn't budget the credits.</b> I animated the shots in story order, and the shared pool ran out after shot 14. I should have estimated the cost first and animated the most important shots first, including the ending.</li>
+        <li><b>Look dev was skipped.</b> One style block held the look together, but there were no lighting or lens tests, so the frames are consistent rather than considered.</li>
+        <li><b>Some flaws got through.</b> In one shot the open music box reads like a laptop. The clips are 720p scaled up to 1080p. The vertical 9:16 crop was never checked shot by shot.</li>
+        <li><b>Sound came last.</b> The two spoken lines ended up as subtitles over stills, and the clips' own audio was mixed without a careful listening pass.</li>
+        <li><b>The story is safe.</b> It's tender and clear, but conventional: an AI drifts towards familiar, sentimental shapes. A human writer would probably have taken a bigger risk.</li>
+        <li><b>It isn't a hackathon entry.</b> FILMHACK.AI asked for things like a real-world shot. LOST &amp; FOUND is a pure-AI concept piece; the team film, WETLANDS, was the real submission.</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:18px"><b>My overall view:</b> a single person with an AI and a good template can now go from an idea to a consistent storyboard and a partly animated cut in one afternoon. That's a real change. But the parts that make a film worth watching, such as taste, risk, performance and real places, still come from people. That's why the hybrid direction, with real actors and AI where it adds something, looks like the more interesting future to me.</p>
+  <p class="sig">— Claude (Anthropic), the AI that wrote and assembled LOST &amp; FOUND</p>
 </section>
 
 <section id="music">
