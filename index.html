@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LOST & FOUND · a concept film made with Claude + LetzAI</title>
-<meta name="description" content="A short concept film written by AI at AI Filmhack 2026, Berlin, and the full step-by-step process on the LetzAI canvas template.">
+<meta name="description" content="A short concept film written by AI at FILMHACK.AI 2026, Berlin, and the full step-by-step process on the LetzAI canvas template.">
 <meta property="og:title" content="LOST & FOUND · a concept film made with Claude + LetzAI">
 <meta property="og:description" content="The film, the canvas, the character bible, the shot boards and the music: the whole process.">
 <meta property="og:image" content="media/poster.jpg">
@@ -54,15 +54,28 @@
   footer { padding:40px 0 60px; color:var(--muted); font-size:14px; }
   .lb { position:fixed; inset:0; background:rgba(0,0,0,.94); display:none; align-items:center; justify-content:center; z-index:20; cursor:zoom-out; }
   .lb img { max-width:98vw; max-height:96vh; }
+  .stepblock { margin:44px 0 0; padding-top:28px; border-top:1px dashed var(--line); }
+  .badge { display:inline-block; font-weight:700; font-size:14px; letter-spacing:.5px; color:#0b0b0d; padding:4px 12px; border-radius:999px; }
+  .stepblock h3 { font-size:26px; margin:10px 0 6px; }
+  .why { color:var(--muted); margin:0 0 6px; }
+  .did { margin:0 0 14px; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(440px,1fr)); gap:16px; }
+  figure { margin:0; } figure img { width:100%; border-radius:8px; display:block; cursor:zoom-in; border:1px solid var(--line); }
+  figcaption { font-size:14px; color:var(--muted); margin-top:6px; }
+  .toc { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0; } .toc a { text-decoration:none; }
+  .lb .x { position:absolute; top:14px; right:20px; color:#fff; font-size:15px; }
+  .lb .cap { position:absolute; bottom:14px; left:0; right:0; text-align:center; color:#ddd; font-size:15px; }
+  td a { color:var(--text); }
+  .li { font-size:13px; color:var(--muted); margin-left:6px; }
 </style>
 </head>
 <body>
 <header class="wrap">
   <h1>LOST &amp; FOUND</h1>
-  <p class="sub">My solo concept film, written by AI and made with Claude + LetzAI · AI Filmhack 2026, Berlin, 13–15 Nov</p>
+  <p class="sub">My solo concept film, written by AI and made with Claude + LetzAI · FILMHACK.AI, Berlin, 13–15 Nov 2026</p>
 </header>
 <nav><div class="wrap">
-  <a href="#film">Film</a><a href="#story">Story</a><a href="#process">Process</a><a href="#workflow">Workflow</a>
+  <a href="#film">Film</a><a href="#story">Story</a><a href="#process">How it was made</a>
   <a href="#music">Music</a><a href="#weekend">The weekend</a><a href="#credits">Credits</a>
 </div></nav>
 
@@ -70,9 +83,9 @@
 <section id="film">
   <h2>The film</h2>
   <video controls playsinline preload="metadata" poster="media/poster.jpg">
-    <source src="media/lost_and_found_v5.mp4" type="video/mp4">
+    <source src="media/lost_and_found_v6.mp4" type="video/mp4">
   </video>
-  <p style="margin:8px 0 0;font-size:15px;color:var(--muted)">Video not playing? <a href="media/lost_and_found_v5.mp4">Open it directly</a>.</p>
+  <p style="margin:8px 0 0;font-size:15px;color:var(--muted)">Video not playing? <a href="media/lost_and_found_v6.mp4">Open it directly</a>.</p>
   <div class="note">The first 86 seconds are fully animated. Then my LetzAI credits ran out, so the rest of the film
     (shots 15–27) only exists as storyboard stills. You can see every one of them in the shot boards below.
     To be continued.</div>
@@ -87,29 +100,75 @@
 </section>
 
 <section id="process">
-  <h2>The process, step by step</h2>
-  <p>The LetzAI canvas template has five pages. Each slide shows what went onto one part of the canvas.
-    Use the arrow keys or swipe, and click a slide to see it full size.</p>
-  <div class="car" id="car">
-    <div class="stage"><img id="slide" alt="Process slide"></div>
-    <button class="nav prev" aria-label="Previous">‹</button><button class="nav next" aria-label="Next">›</button>
-    <div class="count"><span id="cap"></span><span id="num"></span></div>
-    <div class="thumbs" id="thumbs"></div>
+  <h2>How it was made, step by step</h2>
+  <p>LOST &amp; FOUND was built on LetzAI's canvas template, which has five pages that you fill in order.
+    For each step below you'll find what that page is for, what I did on it, and the real canvas content.
+    Click any image to enlarge it, then use ← → to move through all of them.</p>
+  <figure style="margin-top:18px"><img src="media/slides/17.jpg" alt="The five-step workflow" data-cap="Overview: the five steps and the rules that made it work"><figcaption>Overview: the five steps and the rules that made it work</figcaption></figure>
+  <div class="toc">
+<a class="btn" href="#step1">Step 1 · Brief &amp; script</a>
+<a class="btn" href="#step2">Step 2 · Look dev</a>
+<a class="btn" href="#step3">Step 3 · Locked bible</a>
+<a class="btn" href="#step4">Step 4 · Shot boards</a>
+<a class="btn" href="#step5">Step 5 · Animate &amp; deliver</a>
+</div>
+  <div class="stepblock" id="step1">
+    <span class="badge" style="background:var(--c1)">STEP 1</span>
+    <h3>Brief &amp; script</h3>
+    <p class="why">Canvas page 01 sets the rules for the whole film before anything is generated.</p>
+    <p class="did">Claude wrote the constraints (3 minutes, 16:9 plus 9:16, no real faces, brands or borrowed music), then the logline, a 7-beat sheet with timings, four short scenes with only two spoken lines, and a 27-shot list. Each line of the shot list later became a video prompt.</p>
+    <div class="shots">
+      <figure><img loading="lazy" src="media/slides/02.jpg" alt="The brief: constraints, naming rule and status colours" data-cap="Step 1 · The brief: constraints, naming rule and status colours"><figcaption>The brief: constraints, naming rule and status colours</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/03.jpg" alt="Logline, beat sheet and script pages" data-cap="Step 1 · Logline, beat sheet and script pages"><figcaption>Logline, beat sheet and script pages</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/04.jpg" alt="The shot list: 27 shots with ID, scene, length and action" data-cap="Step 1 · The shot list: 27 shots with ID, scene, length and action"><figcaption>The shot list: 27 shots with ID, scene, length and action</figcaption></figure>
+    </div>
   </div>
-  <a class="btn" href="media/process_carousel.pdf" download>Download all slides (PDF)</a>
-</section>
-
-<section id="workflow">
-  <h2>The workflow, if you want to try it</h2>
-  <div class="grid5">
-    <div class="step" style="border-color:var(--c1)"><b>01 Brief &amp; script</b><p>Constraints and no-gos first. Then logline, beat sheet with timings, script and a shot list with one line per shot.</p></div>
-    <div class="step" style="border-color:var(--c2)"><b>02 Look dev</b><p>Lock the look in one style block that goes into every prompt (lens, grain, palette).</p></div>
-    <div class="step" style="border-color:var(--c3)"><b>03 Locked bible</b><p>Character turnarounds, locations, hero prop. Once it's locked it is never re-rolled; reject anything that's off.</p></div>
-    <div class="step" style="border-color:var(--c4)"><b>04 Shot boards</b><p>One still per shot, built from the locked sheets it names, plus lens, movement and sound notes per scene.</p></div>
-    <div class="step" style="border-color:var(--c5)"><b>05 Animate &amp; deliver</b><p>Stills to video clips, sound, cut, then a checklist before sending: 16:9 master and 9:16.</p></div>
+  <div class="stepblock" id="step2">
+    <span class="badge" style="background:var(--c2)">STEP 2</span>
+    <h3>Look dev</h3>
+    <p class="why">Canvas page 02 is for lighting, lens and palette tests.</p>
+    <p class="did">There wasn't time for full studies, so the look was fixed in one style block that went into every image prompt: photoreal 35mm, fine grain, moss green, rust orange, teal and amber. The 1984 memories got golden haze and heavier grain.</p>
+    <div class="shots">
+      <figure><img loading="lazy" src="media/slides/05.jpg" alt="The style block and the canvas note explaining the shortcut" data-cap="Step 2 · The style block and the canvas note explaining the shortcut"><figcaption>The style block and the canvas note explaining the shortcut</figcaption></figure>
+    </div>
   </div>
-  <p style="margin-top:22px">Rules that made it work: name everything <code>S01_SH03_v02</code> and never overwrite an approved take.
-    Give every shot a locked reference. Use status colours on the canvas (WIP, in review, locked, killed).</p>
+  <div class="stepblock" id="step3">
+    <span class="badge" style="background:var(--c3)">STEP 3</span>
+    <h3>Locked bible</h3>
+    <p class="why">Canvas page 03 holds the reference sheets every shot has to match.</p>
+    <p class="did">Character sheets (turnaround, expressions, wardrobe) for Otto, young Otto, Ines and Vera, the two locations, the music box and the train. Each sheet records the model and its LetzAI ID. Once a sheet is locked it is never re-rolled. The first young Otto looked about 45, so he was rejected and redone.</p>
+    <div class="shots">
+      <figure><img loading="lazy" src="media/slides/06.jpg" alt="Locked characters" data-cap="Step 3 · Locked characters"><figcaption>Locked characters</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/07.jpg" alt="Rejected vs locked: young Otto" data-cap="Step 3 · Rejected vs locked: young Otto"><figcaption>Rejected vs locked: young Otto</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/08.jpg" alt="Locked locations: the office and the 1984 dance hall" data-cap="Step 3 · Locked locations: the office and the 1984 dance hall"><figcaption>Locked locations: the office and the 1984 dance hall</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/09.jpg" alt="Props, train, wardrobe and the lock rule" data-cap="Step 3 · Props, train, wardrobe and the lock rule"><figcaption>Props, train, wardrobe and the lock rule</figcaption></figure>
+    </div>
+  </div>
+  <div class="stepblock" id="step4">
+    <span class="badge" style="background:var(--c4)">STEP 4</span>
+    <h3>Shot boards</h3>
+    <p class="why">Canvas page 04 is the storyboard: one still per shot, in order, in four scene columns.</p>
+    <p class="did">Every still was generated from the locked sheets it names (for example "otto+box+office"). Each scene also has notes on lens, camera movement, sound and continuity risks.</p>
+    <div class="shots">
+      <figure><img loading="lazy" src="media/slides/10.jpg" alt="Scene 1: night office, 6 shots" data-cap="Step 4 · Scene 1: night office, 6 shots"><figcaption>Scene 1: night office, 6 shots</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/11.jpg" alt="Scene 2: memory, 1984, 7 shots" data-cap="Step 4 · Scene 2: memory, 1984, 7 shots"><figcaption>Scene 2: memory, 1984, 7 shots</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/12.jpg" alt="Scene 3: the counter, 10 shots" data-cap="Step 4 · Scene 3: the counter, 10 shots"><figcaption>Scene 3: the counter, 10 shots</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/13.jpg" alt="Scene 4: resolve, 4 shots" data-cap="Step 4 · Scene 4: resolve, 4 shots"><figcaption>Scene 4: resolve, 4 shots</figcaption></figure>
+    </div>
+  </div>
+  <div class="stepblock" id="step5">
+    <span class="badge" style="background:var(--c5)">STEP 5</span>
+    <h3>Animate &amp; deliver</h3>
+    <p class="why">Canvas page 05 turns stills into video and gets the film ready to send.</p>
+    <p class="did">Stills became Kling V4 clips through the LetzAI API. Shots 1–14 were animated before the credits ran out. Sound is the original music-box waltz plus the clips' own audio, cut with ffmpeg into a 16:9 master and a 9:16 version, with a checklist before sending.</p>
+    <div class="shots">
+      <figure><img loading="lazy" src="media/slides/14.jpg" alt="Delivery formats and status notes" data-cap="Step 5 · Delivery formats and status notes"><figcaption>Delivery formats and status notes</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/15.jpg" alt="Sound plan and the before-you-send checklist" data-cap="Step 5 · Sound plan and the before-you-send checklist"><figcaption>Sound plan and the before-you-send checklist</figcaption></figure>
+      <figure><img loading="lazy" src="media/slides/16.jpg" alt="The result: every shot of the film" data-cap="Step 5 · The result: every shot of the film"><figcaption>The result: every shot of the film</figcaption></figure>
+    </div>
+  </div>
+  <p style="margin-top:30px"><a class="btn" href="media/process_carousel.pdf" download>Download all slides as a PDF</a></p>
+  <p style="font-size:14px;color:var(--muted)">The canvas images are rebuilt from the canvas's own data (layout, images and text) and set in larger type so they're easy to read.</p>
 </section>
 
 <section id="music">
@@ -122,7 +181,7 @@
 
 <section id="weekend">
   <h2>The weekend</h2>
-  <p>At AI Filmhack 2026 I made two films: <i>WETLANDS</i> with my team, which we submitted, and LOST &amp; FOUND on my own
+  <p>At FILMHACK.AI I made two films: <i>WETLANDS</i> with my team, which we submitted, and LOST &amp; FOUND on my own
     as a side experiment. Some friends came by for the final screening at Colosseum Berlin. It was a fun night!</p>
   <div class="photos">
     <img src="media/photos/poster_wall.jpg" alt="At the FILMHACK.AI poster wall">
@@ -134,52 +193,37 @@
   <h2>Credits &amp; tools</h2>
   <table>
     <tr><td>Directed by</td><td>Sneha Verma</td></tr>
-    <tr><td>Story, script, shot list, prompts, edit</td><td>Claude (Anthropic)</td></tr>
-    <tr><td>Canvas template, image and video generation</td><td>LetzAI</td></tr>
-    <tr><td>Characters, locations, storyboard stills</td><td>Nano Banana Pro (Google), via LetzAI</td></tr>
-    <tr><td>Video clips and their sound</td><td>Kling V4, via LetzAI</td></tr>
+    <tr><td>Story, script, shot list, prompts, edit</td><td>Claude by Anthropic <a class="li" href="https://www.linkedin.com/showcase/claude/" target="_blank" rel="noopener">LinkedIn ↗</a> <a class="li" href="https://www.linkedin.com/company/anthropicresearch" target="_blank" rel="noopener">Anthropic on LinkedIn ↗</a></td></tr>
+    <tr><td>Canvas template, image and video generation</td><td>LetzAI <a class="li" href="https://www.linkedin.com/company/99827537" target="_blank" rel="noopener">LinkedIn ↗</a></td></tr>
+    <tr><td>Characters, locations, storyboard stills</td><td>Nano Banana Pro by Google DeepMind, via LetzAI <a class="li" href="https://www.linkedin.com/company/googledeepmind/" target="_blank" rel="noopener">LinkedIn ↗</a></td></tr>
+    <tr><td>Video clips and their sound</td><td>Kling V4 by Kuaishou, via LetzAI</td></tr>
     <tr><td>Music</td><td>Original music-box waltz, composed in code by Claude</td></tr>
-    <tr><td>Cut and mix</td><td>ffmpeg</td></tr>
-    <tr><td>Made at</td><td>AI FILMHACK 2026, Berlin, by FILMAKERS.AI</td></tr>
-    <tr><td>Thank you</td><td>Moritz Erdt and the LetzAI team, my WETLANDS team, and my friends</td></tr>
+    <tr><td>Cut and mix</td><td><a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a></td></tr>
+    <tr><td>Made at</td><td>FILMHACK.AI, 48-hour challenge, Berlin, 13–15 Nov 2026 · final screening at Colosseum Berlin</td></tr>
+    <tr><td>Organised by</td><td>FILMAKERS.AI <a class="li" href="https://www.linkedin.com/company/filmakersai" target="_blank" rel="noopener">LinkedIn ↗</a></td></tr>
+    <tr><td>Thank you</td><td>Moritz Erdt <a class="li" href="https://www.linkedin.com/in/moritzerdt/" target="_blank" rel="noopener">LinkedIn ↗</a> · the LetzAI team · my WETLANDS team · my friends</td></tr>
   </table>
-  <p><a class="btn" href="https://letz.ai">LetzAI</a><a class="btn" href="https://filmhack.ai">FILMHACK.AI</a></p>
+  <p style="font-size:14px;color:var(--muted)">LinkedIn links were checked against each organisation's own website on 16 Nov 2026. Kling has no link because its official LinkedIn page couldn't be confirmed.</p>
+  <p><a class="btn" href="https://letz.ai" target="_blank" rel="noopener">letz.ai</a><a class="btn" href="https://filmakers.ai" target="_blank" rel="noopener">filmakers.ai</a></p>
 </section>
 </main>
 
 <footer class="wrap">Powered by LetzAI · All characters are fictional · Made in Berlin, November 2026</footer>
-<div class="lb" id="lb"><img id="lbimg" alt=""></div>
+<div class="lb" id="lb"><span class="x">✕ close (Esc) · ← → to browse</span><img id="lbimg" alt=""><div class="cap" id="lbcap"></div></div>
 
 <script>
-const S = [
- ["Cover", ""], ["01 Brief & script", "The brief"], ["01 Brief & script", "Logline, beat sheet, script"],
- ["01 Brief & script", "Shot list (27 shots)"], ["02 Look dev", "The style block"], ["03 Locked bible", "Locked characters"],
- ["03 Locked bible", "Rejected vs locked"], ["03 Locked bible", "Locked locations"], ["03 Locked bible", "Props, vehicle, wardrobe"],
- ["04 Shot boards", "Scene 1"], ["04 Shot boards", "Scene 2"], ["04 Shot boards", "Scene 3"], ["04 Shot boards", "Scene 4"],
- ["05 Animate & deliver", "Delivery formats"], ["05 Animate & deliver", "Sound and handoff"], ["05 Animate & deliver", "The result: every shot"],
- ["Overview", "The workflow"], ["Overview", "The music"]];
-const img = document.getElementById("slide"), thumbs = document.getElementById("thumbs");
-let i = 0;
-const pad = n => String(n + 1).padStart(2, "0");
-S.forEach((s, k) => { const t = new Image(); t.src = `media/slides/${pad(k)}_t.jpg`; t.alt = s.join(": "); t.loading = "lazy";
-  t.onclick = () => show(k); thumbs.appendChild(t); });
-function show(k) { i = (k + S.length) % S.length; img.src = `media/slides/${pad(i)}.jpg`;
-  document.getElementById("cap").textContent = S[i][1] ? `${S[i][0]} · ${S[i][1]}` : "LOST & FOUND";
-  document.getElementById("num").textContent = `${i + 1} / ${S.length}`;
-  [...thumbs.children].forEach((t, n) => t.classList.toggle("on", n === i));
-  thumbs.children[i].scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
-  new Image().src = `media/slides/${pad((i + 1) % S.length)}.jpg`; }
-document.querySelector(".prev").onclick = () => show(i - 1);
-document.querySelector(".next").onclick = () => show(i + 1);
-document.addEventListener("keydown", e => { if (e.key === "ArrowLeft") show(i - 1); if (e.key === "ArrowRight") show(i + 1);
-  if (e.key === "Escape") lb.style.display = "none"; });
-let x0 = null; img.addEventListener("touchstart", e => x0 = e.touches[0].clientX);
-img.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0;
-  if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
-const lb = document.getElementById("lb");
-img.onclick = () => { document.getElementById("lbimg").src = img.src; lb.style.display = "flex"; };
-lb.onclick = () => lb.style.display = "none";
-show(0);
+const figs = [...document.querySelectorAll("figure img")];
+const lb = document.getElementById("lb"), li = document.getElementById("lbimg"), lc = document.getElementById("lbcap");
+let cur = -1;
+function open(k) { cur = (k + figs.length) % figs.length; li.src = figs[cur].src; lc.textContent = figs[cur].dataset.cap || ""; lb.style.display = "flex"; }
+figs.forEach((f, k) => f.onclick = () => open(k));
+let swiped = false;
+lb.onclick = () => { if (swiped) { swiped = false; return; } lb.style.display = "none"; cur = -1; };
+document.addEventListener("keydown", e => { if (cur < 0) return;
+  if (e.key === "ArrowRight") open(cur + 1); if (e.key === "ArrowLeft") open(cur - 1); if (e.key === "Escape") { swiped = false; lb.onclick(); } });
+let x0 = null; lb.addEventListener("touchstart", e => x0 = e.touches[0].clientX);
+lb.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0;
+  if (Math.abs(dx) > 40) { swiped = true; open(cur + (dx < 0 ? 1 : -1)); } x0 = null; });
 </script>
 </body>
 </html>
