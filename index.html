@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOST & FOUND · a concept film made with Claude + LetzAI</title>
+<meta name="description" content="A short concept film written by AI at AI Filmhack 2026, Berlin, and the full step-by-step process on the LetzAI canvas template.">
+<meta property="og:title" content="LOST & FOUND · a concept film made with Claude + LetzAI">
+<meta property="og:description" content="The film, the canvas, the character bible, the shot boards and the music: the whole process.">
+<meta property="og:image" content="media/poster.jpg">
+<style>
+  :root { --bg:#0b0b0d; --panel:#16161a; --line:#2a2a30; --text:#e9e9ec; --muted:#a1a1aa; --cream:#e8d9b0;
+          --c1:#e08a1e; --c2:#14b8a6; --c3:#22c55e; --c4:#3b82f6; --c5:#ef4444; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color:var(--cream); }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+  header { padding:64px 0 24px; }
+  h1 { font-family:Georgia,"DejaVu Serif",serif; color:var(--cream); font-size:clamp(44px,8vw,88px); margin:0; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:20px; margin:8px 0 0; }
+  nav { position:sticky; top:0; z-index:5; background:rgba(11,11,13,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
+  nav .wrap { display:flex; gap:22px; overflow-x:auto; padding-top:12px; padding-bottom:12px; }
+  nav a { color:var(--muted); text-decoration:none; white-space:nowrap; font-size:15px; }
+  nav a:hover { color:var(--text); }
+  section { padding:56px 0; border-bottom:1px solid var(--line); }
+  h2 { font-family:Georgia,"DejaVu Serif",serif; font-size:34px; margin:0 0 18px; color:var(--cream); font-weight:normal; }
+  video { width:100%; border-radius:12px; background:#000; display:block; }
+  .note { background:var(--panel); border-left:4px solid var(--c5); padding:16px 20px; border-radius:8px; margin-top:18px; }
+  .logline { font-family:Georgia,"DejaVu Serif",serif; font-size:23px; line-height:1.5; }
+  .grid5 { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; margin-top:22px; }
+  .step { background:var(--panel); border-radius:10px; padding:16px; border-top:4px solid; }
+  .step b { display:block; margin-bottom:6px; }
+  .step p { margin:0; color:var(--muted); font-size:15px; }
+  /* carousel */
+  .car { position:relative; }
+  .car .stage { position:relative; aspect-ratio:16/9; background:#000; border-radius:12px; overflow:hidden; }
+  .car .stage img { width:100%; height:100%; object-fit:contain; display:block; cursor:zoom-in; }
+  .car button.nav { position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border-radius:50%;
+       border:0; background:rgba(0,0,0,.6); color:#fff; font-size:26px; cursor:pointer; }
+  .car button.prev { left:12px; } .car button.next { right:12px; }
+  .car .count { color:var(--muted); margin:10px 0; font-size:15px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  .thumbs { display:flex; gap:8px; overflow-x:auto; padding-bottom:8px; scrollbar-color:#3a3a40 transparent; }
+  .thumbs img { width:128px; aspect-ratio:16/9; object-fit:cover; border-radius:6px; opacity:.5; cursor:pointer; border:2px solid transparent; flex:none; }
+  .thumbs img.on { opacity:1; border-color:var(--cream); }
+  .photos { display:grid; grid-template-columns:1fr 1.4fr; gap:16px; align-items:start; }
+  .photos img { width:100%; border-radius:10px; display:block; }
+  @media (max-width:760px) { .photos { grid-template-columns:1fr; } }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  td:first-child { color:var(--muted); width:42%; }
+  audio { width:100%; margin-top:10px; }
+  .btn { display:inline-block; padding:10px 18px; border:1px solid var(--cream); border-radius:999px; text-decoration:none; margin:8px 10px 0 0; }
+  footer { padding:40px 0 60px; color:var(--muted); font-size:14px; }
+  .lb { position:fixed; inset:0; background:rgba(0,0,0,.94); display:none; align-items:center; justify-content:center; z-index:20; cursor:zoom-out; }
+  .lb img { max-width:98vw; max-height:96vh; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>LOST &amp; FOUND</h1>
+  <p class="sub">My solo concept film, written by AI and made with Claude + LetzAI · AI Filmhack 2026, Berlin, 13–15 Nov</p>
+</header>
+<nav><div class="wrap">
+  <a href="#film">Film</a><a href="#story">Story</a><a href="#process">Process</a><a href="#workflow">Workflow</a>
+  <a href="#music">Music</a><a href="#weekend">The weekend</a><a href="#credits">Credits</a>
+</div></nav>
+
+<main class="wrap">
+<section id="film">
+  <h2>The film</h2>
+  <video controls playsinline preload="metadata" poster="media/poster.jpg">
+    <source src="media/lost_and_found_v5.mp4" type="video/mp4">
+  </video>
+  <p style="margin:8px 0 0;font-size:15px;color:var(--muted)">Video not playing? <a href="media/lost_and_found_v5.mp4">Open it directly</a>.</p>
+  <div class="note">The first 86 seconds are fully animated. Then my LetzAI credits ran out, so the rest of the film
+    (shots 15–27) only exists as storyboard stills. You can see every one of them in the shot boards below.
+    To be continued.</div>
+</section>
+
+<section id="story">
+  <h2>The story</h2>
+  <p class="logline">A lonely night clerk at a city lost-and-found office has kept one unclaimed music box for 40 years.
+    When a young woman finally comes to claim it, he has to give back the last piece of the woman he loved.</p>
+  <p>Claude came up with the idea, the beat sheet, the script and a 27-shot list. I directed: I chose what to keep,
+    rejected what didn't work, and decided what came next. All characters are invented. There are no real faces, brands or borrowed music.</p>
+</section>
+
+<section id="process">
+  <h2>The process, step by step</h2>
+  <p>The LetzAI canvas template has five pages. Each slide shows what went onto one part of the canvas.
+    Use the arrow keys or swipe, and click a slide to see it full size.</p>
+  <div class="car" id="car">
+    <div class="stage"><img id="slide" alt="Process slide"></div>
+    <button class="nav prev" aria-label="Previous">‹</button><button class="nav next" aria-label="Next">›</button>
+    <div class="count"><span id="cap"></span><span id="num"></span></div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+  <a class="btn" href="media/process_carousel.pdf" download>Download all slides (PDF)</a>
+</section>
+
+<section id="workflow">
+  <h2>The workflow, if you want to try it</h2>
+  <div class="grid5">
+    <div class="step" style="border-color:var(--c1)"><b>01 Brief &amp; script</b><p>Constraints and no-gos first. Then logline, beat sheet with timings, script and a shot list with one line per shot.</p></div>
+    <div class="step" style="border-color:var(--c2)"><b>02 Look dev</b><p>Lock the look in one style block that goes into every prompt (lens, grain, palette).</p></div>
+    <div class="step" style="border-color:var(--c3)"><b>03 Locked bible</b><p>Character turnarounds, locations, hero prop. Once it's locked it is never re-rolled; reject anything that's off.</p></div>
+    <div class="step" style="border-color:var(--c4)"><b>04 Shot boards</b><p>One still per shot, built from the locked sheets it names, plus lens, movement and sound notes per scene.</p></div>
+    <div class="step" style="border-color:var(--c5)"><b>05 Animate &amp; deliver</b><p>Stills to video clips, sound, cut, then a checklist before sending: 16:9 master and 9:16.</p></div>
+  </div>
+  <p style="margin-top:22px">Rules that made it work: name everything <code>S01_SH03_v02</code> and never overwrite an approved take.
+    Give every shot a locked reference. Use status colours on the canvas (WIP, in review, locked, killed).</p>
+</section>
+
+<section id="music">
+  <h2>The music</h2>
+  <p>An original music-box waltz in A minor, composed in code: Claude wrote the melody, and every steel tine is
+    synthesised in Python. It uses no samples. The melody is part of the story, because Ines hums it at the counter.</p>
+  <audio controls preload="none" src="media/music_box_waltz.mp3"></audio>
+  <a class="btn" href="media/musicbox.py">See the code (musicbox.py)</a>
+</section>
+
+<section id="weekend">
+  <h2>The weekend</h2>
+  <p>At AI Filmhack 2026 I made two films: <i>WETLANDS</i> with my team, which we submitted, and LOST &amp; FOUND on my own
+    as a side experiment. Some friends came by for the final screening at Colosseum Berlin. It was a fun night!</p>
+  <div class="photos">
+    <img src="media/photos/poster_wall.jpg" alt="At the FILMHACK.AI poster wall">
+    <img src="media/photos/group.jpg" alt="With friends at the final screening, Colosseum Berlin">
+  </div>
+</section>
+
+<section id="credits">
+  <h2>Credits &amp; tools</h2>
+  <table>
+    <tr><td>Directed by</td><td>Sneha Verma</td></tr>
+    <tr><td>Story, script, shot list, prompts, edit</td><td>Claude (Anthropic)</td></tr>
+    <tr><td>Canvas template, image and video generation</td><td>LetzAI</td></tr>
+    <tr><td>Characters, locations, storyboard stills</td><td>Nano Banana Pro (Google), via LetzAI</td></tr>
+    <tr><td>Video clips and their sound</td><td>Kling V4, via LetzAI</td></tr>
+    <tr><td>Music</td><td>Original music-box waltz, composed in code by Claude</td></tr>
+    <tr><td>Cut and mix</td><td>ffmpeg</td></tr>
+    <tr><td>Made at</td><td>AI FILMHACK 2026, Berlin, by FILMAKERS.AI</td></tr>
+    <tr><td>Thank you</td><td>Moritz Erdt and the LetzAI team, my WETLANDS team, and my friends</td></tr>
+  </table>
+  <p><a class="btn" href="https://letz.ai">LetzAI</a><a class="btn" href="https://filmhack.ai">FILMHACK.AI</a></p>
+</section>
+</main>
+
+<footer class="wrap">Powered by LetzAI · All characters are fictional · Made in Berlin, November 2026</footer>
+<div class="lb" id="lb"><img id="lbimg" alt=""></div>
+
+<script>
+const S = [
+ ["Cover", ""], ["01 Brief & script", "The brief"], ["01 Brief & script", "Logline, beat sheet, script"],
+ ["01 Brief & script", "Shot list (27 shots)"], ["02 Look dev", "The style block"], ["03 Locked bible", "Locked characters"],
+ ["03 Locked bible", "Rejected vs locked"], ["03 Locked bible", "Locked locations"], ["03 Locked bible", "Props, vehicle, wardrobe"],
+ ["04 Shot boards", "Scene 1"], ["04 Shot boards", "Scene 2"], ["04 Shot boards", "Scene 3"], ["04 Shot boards", "Scene 4"],
+ ["05 Animate & deliver", "Delivery formats"], ["05 Animate & deliver", "Sound and handoff"], ["05 Animate & deliver", "The result: every shot"],
+ ["Overview", "The workflow"], ["Overview", "The music"]];
+const img = document.getElementById("slide"), thumbs = document.getElementById("thumbs");
+let i = 0;
+const pad = n => String(n + 1).padStart(2, "0");
+S.forEach((s, k) => { const t = new Image(); t.src = `media/slides/${pad(k)}_t.jpg`; t.alt = s.join(": "); t.loading = "lazy";
+  t.onclick = () => show(k); thumbs.appendChild(t); });
+function show(k) { i = (k + S.length) % S.length; img.src = `media/slides/${pad(i)}.jpg`;
+  document.getElementById("cap").textContent = S[i][1] ? `${S[i][0]} · ${S[i][1]}` : "LOST & FOUND";
+  document.getElementById("num").textContent = `${i + 1} / ${S.length}`;
+  [...thumbs.children].forEach((t, n) => t.classList.toggle("on", n === i));
+  thumbs.children[i].scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+  new Image().src = `media/slides/${pad((i + 1) % S.length)}.jpg`; }
+document.querySelector(".prev").onclick = () => show(i - 1);
+document.querySelector(".next").onclick = () => show(i + 1);
+document.addEventListener("keydown", e => { if (e.key === "ArrowLeft") show(i - 1); if (e.key === "ArrowRight") show(i + 1);
+  if (e.key === "Escape") lb.style.display = "none"; });
+let x0 = null; img.addEventListener("touchstart", e => x0 = e.touches[0].clientX);
+img.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0;
+  if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
+const lb = document.getElementById("lb");
+img.onclick = () => { document.getElementById("lbimg").src = img.src; lb.style.display = "flex"; };
+lb.onclick = () => lb.style.display = "none";
+show(0);
+</script>
+</body>
+</html>
