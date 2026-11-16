@@ -9,7 +9,11 @@
 <meta property="og:description" content="The film, the canvas, the character bible, the shot boards and the music: the whole process.">
 <meta property="og:image" content="media/poster.jpg">
 <style>
-  :root { --bg:#0b0b0d; --panel:#16161a; --line:#2a2a30; --text:#e9e9ec; --muted:#a1a1aa; --cream:#e8d9b0;
+  :root { --bg:#f6f1e7; --panel:#fffdf8; --line:#e2d9c8; --text:#221f1b; --muted:#6c655a; --cream:#8a5a12; --navbg:rgba(246,241,231,.93);
+          --shadow:0 2px 14px rgba(60,40,10,.10);
+          --c1:#e08a1e; --c2:#14b8a6; --c3:#22c55e; --c4:#3b82f6; --c5:#ef4444; }
+  :root[data-theme=dark] { --bg:#0b0b0d; --panel:#16161a; --line:#2a2a30; --text:#e9e9ec; --muted:#a1a1aa; --cream:#e8d9b0; --navbg:rgba(11,11,13,.92);
+          --shadow:none;
           --c1:#e08a1e; --c2:#14b8a6; --c3:#22c55e; --c4:#3b82f6; --c5:#ef4444; }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -19,7 +23,7 @@
   header { padding:64px 0 24px; }
   h1 { font-family:Georgia,"DejaVu Serif",serif; color:var(--cream); font-size:clamp(44px,8vw,88px); margin:0; letter-spacing:1px; }
   .sub { color:var(--muted); font-size:20px; margin:8px 0 0; }
-  nav { position:sticky; top:0; z-index:5; background:rgba(11,11,13,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
+  nav { position:sticky; top:0; z-index:5; background:var(--navbg); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
   nav .wrap { display:flex; gap:22px; overflow-x:auto; padding-top:12px; padding-bottom:12px; }
   nav a { color:var(--muted); text-decoration:none; white-space:nowrap; font-size:15px; }
   nav a:hover { color:var(--text); }
@@ -72,10 +76,18 @@
   .pc > div { background:var(--panel); border-radius:10px; padding:18px 22px; border-top:4px solid; }
   .pc h3 { margin:0 0 8px; font-size:20px; } .pc ul { margin:0; padding-left:20px; } .pc li { margin:8px 0; }
   .sig { color:var(--muted); font-style:italic; margin-top:18px; }
+  .pc > div, .step, .note, figure img { box-shadow:var(--shadow); }
+  header.wrap { position:relative; }
+  #theme { position:absolute; top:24px; right:24px; background:var(--panel); color:var(--text); border:1px solid var(--line);
+           border-radius:999px; padding:8px 14px; font:inherit; font-size:14px; cursor:pointer; }
 </style>
+<script>
+  (function(){ var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; })();
+</script>
 </head>
 <body>
 <header class="wrap">
+  <button id="theme" aria-label="Switch light or dark"></button>
   <h1>LOST &amp; FOUND</h1>
   <p class="sub">My solo concept film, written by AI and made with Claude + LetzAI · FILMHACK.AI, Berlin, 13–15 Nov 2026</p>
 </header>
@@ -261,6 +273,13 @@ document.addEventListener("keydown", e => { if (cur < 0) return;
 let x0 = null; lb.addEventListener("touchstart", e => x0 = e.touches[0].clientX);
 lb.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0;
   if (Math.abs(dx) > 40) { swiped = true; open(cur + (dx < 0 ? 1 : -1)); } x0 = null; });
+</script>
+<script>
+  const tb = document.getElementById("theme");
+  const setLabel = () => tb.textContent = document.documentElement.dataset.theme === "dark" ? "☀ Light" : "☾ Dark";
+  tb.onclick = () => { const d = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = d; localStorage.setItem("theme", d); setLabel(); };
+  setLabel();
 </script>
 </body>
 </html>
