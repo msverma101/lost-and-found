@@ -12,6 +12,10 @@ together with the full step-by-step process on the LetzAI canvas template.
 | `index.html`, `media/` | The website: the film (WebM + MP4), process slides, music, photos, credits |
 | `pipeline/` | The scripts that made the film |
 | `tools/` | The scripts that made the process slides, the cards and the LinkedIn video cut |
+| `pipeline/bible/` | The locked character, location, prop and vehicle sheets (plus the rejected young Otto) |
+| `pipeline/stills/` | All 27 storyboard stills, one per shot, named by shot ID |
+| `film-template/` | A reusable folder structure for any AI film: brief, look, characters, locations, props, script, shot list, sound, delivery |
+| [Releases](https://github.com/msverma101/lost-and-found/releases) | The full 3:04 rough cut (16:9 and 9:16) and the 14 animated Kling clips |
 
 ### `pipeline/`: how the film was made
 - `plan.md`: brief, logline, beats, the locked bible and the sound plan
@@ -28,6 +32,10 @@ Typical run: `python3 run.py stills`, then `python3 run.py clips`, then `python3
 ### `tools/`: how the slides and video were made
 `render_canvas.py` and `render_sections.py` redraw canvas pages from the canvas JSON. `build_process_slides.py` builds the 18 process slides.
 `make_cards.py` and `build_video.sh` build the LinkedIn cut. They were written for this project's local folder layout, so treat them as examples rather than ready-to-run tools.
+
+## Finishing the film
+Shots 15–27 still need to be animated (about 10.4k LetzAI credits at 720p). Download the clips from the release into
+`pipeline/clips/`, put your reference URLs into `shots.py`, then run `python3 run.py clips` and `python3 assemble.py`.
 
 ## Credits
 Directed by Sneha Verma · story, script, prompts and edit by Claude (Anthropic) · images and video via LetzAI (Nano Banana Pro by Google DeepMind, Kling V4 by Kuaishou) · cut with ffmpeg · made at FILMHACK.AI, organised by FILMAKERS.AI. All characters are fictional.
